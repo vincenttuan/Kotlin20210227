@@ -79,6 +79,10 @@ fun main(args: Array<String>) {
         if(guess == ans) {
             println("Bingo")
             break
+        } else if(guess > ans) {
+            println("請猜小一點")
+        } else {
+            println("請猜大一點")
         }
     }
 }
