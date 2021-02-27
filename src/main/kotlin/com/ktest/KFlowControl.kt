@@ -2,6 +2,14 @@ package com.ktest
 
 import kotlin.random.Random
 
+fun getLevel(score: Int) = when(score) {
+    in 90..100 -> "A"
+    in 80..89 -> "B"
+    in 70..79 -> "C"
+    in 60..69 -> "D"
+    else -> "E"
+}
+
 // if , when, for, while, do while
 fun main(args: Array<String>) {
     // if
@@ -26,6 +34,7 @@ fun main(args: Array<String>) {
         else -> "E"
     }
     println(level)
+
     level = when(score/10) {
         10, 9 -> "A"
         8 -> "B"
@@ -35,6 +44,7 @@ fun main(args: Array<String>) {
     }
     println(level)
 
+    println(getLevel(score))
 
 
 }
