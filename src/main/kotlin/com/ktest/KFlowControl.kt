@@ -1,6 +1,7 @@
 package com.ktest
 
-import kotlin.random.Random
+import java.util.*
+import kotlin.random.Random as r
 
 fun getLevel(score: Int) = when(score) {
     in 90..100 -> "A"
@@ -13,7 +14,7 @@ fun getLevel(score: Int) = when(score) {
 // if , when, for, while, do while
 fun main(args: Array<String>) {
     // if
-    var score = Random.nextInt(101)
+    var score = r.nextInt(101)
     val pass = if(score >= 60) "Pass" else "Fail"
     println("$score $pass")
 
@@ -43,8 +44,41 @@ fun main(args: Array<String>) {
         else -> "E"
     }
     println(level)
-
     println(getLevel(score))
 
+    // for
+    for(i in 1..10) {
+        print("$i ")
+    }
+    println()
 
+    for(i in 1..10 step 2) {
+        print("$i ")
+    }
+    println()
+
+    for(i in 10 downTo 1) {
+        print("$i ")
+    }
+    println()
+
+    for(i in 1 until 10) {
+        print("$i ")
+    }
+    println()
+
+    // 動動腦
+    // 有一的1~10的亂數 ans , 給使用者來猜, 猜對 Bingo, 有五次機會
+    // 加入請猜小/大一點的提示
+    val ans = r.nextInt(10)+1
+    val max = 5
+    for(i in 1..max) {
+        print("第 $i/$max 次: 請輸入數字: ")
+        //val guess = Scanner(System.`in`).nextInt()
+        val guess = readLine()!!.toInt()
+        if(guess == ans) {
+            println("Bingo")
+            break
+        }
+    }
 }
