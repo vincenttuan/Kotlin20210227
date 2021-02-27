@@ -20,10 +20,16 @@ fun mul(x:Int = 0, y:Int = 0): Int {
     return sum
 }
 
+fun div(x:Int = 0, y:Int = 0): Int {
+    val sum = x / y
+    return sum
+}
+
 fun main(args: Array<String>) {
     println(add(10, 20))
     println(sub(10, 20))
     println(sub(10))
     println(mul(10, 20))
     println(mul())
+    println(div(y=1))
 }
