@@ -16,6 +16,8 @@ fun main() {
         println(num1[i])
     }
     // 使用 lambda 創建
+    //val num3 = Array(5, { i -> i * 1 })
+    //val num3 = Array(5) { i -> i * 1 }
     val num3 = Array(5) { i -> i * 1 }
     for(i in num3.indices) {
         println(num3[i])
@@ -23,4 +25,12 @@ fun main() {
     // 四星彩電腦選號 (0~9)
     val num4 = Array(4) { _ -> Random.nextInt(10) }
     println(num4.contentToString()) // Arrays.toString(num4)
+    // setter / getter
+    var n1 = num4.get(1) // num4[1]
+    println(n1)
+    num4.set(1, 9) // num4[1] = 9
+    println(num4.contentToString())
+
+    // for-each (印出元素內容)
+    num4.forEach { n -> println(n) }
 }
