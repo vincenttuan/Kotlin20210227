@@ -8,7 +8,11 @@ fun main() {
     var ePos = 0
     do {
         print("電梯在 ${ePos} 樓, 請輸入樓層(-1-8): ")
-        var floor = readLine()!!.toInt()
+
+        // 將 try 作為一個表達式
+        // -999 表示所輸入的不是數值
+        var floor = try { readLine()!!.toInt() } catch (e: java.lang.Exception) {-999}
+        println("floor: ${floor}")
         //if(floor < -1 || floor > 8) continue
         // 處理樓層範圍錯誤
         try {
@@ -17,7 +21,6 @@ fun main() {
             println(e.message)
             continue
         }
-
 
         if(floor > ePos) { // 電梯上樓
             println("電梯上樓")
