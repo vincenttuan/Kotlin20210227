@@ -1,6 +1,6 @@
 package com.ktest
 
-class Account(val name:String) {
+data class Account(val name:String) {
     var balance: Int = 0
         get() = field
         set(value) {
@@ -15,4 +15,5 @@ fun main() {
     println(act.balance)
     act.balance = -100
     println(act.balance)
+    println(act)
 }
