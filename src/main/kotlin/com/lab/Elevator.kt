@@ -12,6 +12,7 @@ fun main() {
         // 將 try 作為一個表達式
         // -999 表示所輸入的不是數值
         var floor = try { readLine()!!.toInt() } catch (e: java.lang.Exception) {
+            // 若使用者輸入 B1 則回傳 -1
             if(e.message!!.contains("B1")) -1 else -999
         }
         println("floor: ${floor}")
