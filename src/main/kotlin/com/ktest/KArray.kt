@@ -11,7 +11,7 @@ fun main() {
     for(i in 0..num1.size-1) {
         println(num1[i])
     }
-    println(num1.indices)
+    println(num1.indices) // 0..3
     for(i in num1.indices) {
         println(num1[i])
     }
