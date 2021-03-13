@@ -1,5 +1,7 @@
 package com.函式呼叫.集合聚合操作
 
+import java.util.*
+
 // Pair 與 Triple
 fun main() {
     // Pair
@@ -29,8 +31,20 @@ fun main() {
     println("$i, $j, $k")
 
     // 應用
-    val scores = mapOf(Pair("小明", 100), "小華" to 80, "小英" to 90)
+    var scores = mapOf(Pair("小明", 100), "小華" to 80, "小英" to 90)
+    // 在 scores 中新增小美成績 : Pair("小美", 70)
+    // 由於 mapOf 預設是 immutable 因此不可加入新元素
+    // 若要加入新元素則必需改變為可變型別
+    scores = scores.toMutableMap()
+    //scores["小美"] = 70
+    scores.put("小美", 70)
+
     for (entry in scores) {
         println("${entry.key} ${entry.value}")
     }
+    // 統計資料
+    val stat = scores.entries.stream().mapToInt { e -> e.value }.summaryStatistics()
+    println(stat)
+    println(stat.sum)
+
 }
