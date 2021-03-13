@@ -47,4 +47,7 @@ fun main() {
     println(stat)
     println(stat.sum)
 
+    // 可增加元素的集合 (mutableMapOf)
+    val scores2 = mutableMapOf(Pair("小明", 100), "小華" to 80, "小英" to 90)
+    scores2.put("小美", 70)
 }
