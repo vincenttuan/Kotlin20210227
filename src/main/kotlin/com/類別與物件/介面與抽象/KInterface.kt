@@ -29,10 +29,19 @@ class TextField: Clickable, Focusable {
         println("I ${if(b) "got" else "lost"} focus.")
     }
 
+    override fun showOff() {
+        super<Clickable>.showOff()
+        super<Focusable>.showOff()
+    }
 }
 
 fun main() {
     val btn = Button()
     btn.showOff()
     btn.click()
+
+    val tf = TextField()
+    tf.showOff()
+    tf.click()
+    tf.setFocus(true)
 }
