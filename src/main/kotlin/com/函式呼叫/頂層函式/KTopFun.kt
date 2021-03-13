@@ -1,3 +1,4 @@
+// Java code 的調用請參考 com.jtest.CallTopFun.java
 @file:JvmName("Calc") // java 可以透過此類別名稱調用
 package com.topfun
 
