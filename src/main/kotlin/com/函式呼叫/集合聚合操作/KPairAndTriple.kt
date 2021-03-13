@@ -20,5 +20,17 @@ fun main() {
     println("${t.component1()} ${t.component2()} ${t.component3()}")
 
     // 解構 Pair, Triple
+    val (a, b) = p // p 是上面建立的 Pair(1, "A")
+    println("$a, $b")
+    val (name, score) = Pair("小明", 100)
+    println("$name, $score")
 
+    val (i, j, k) = t
+    println("$i, $j, $k")
+
+    // 應用
+    val scores = mapOf(Pair("小明", 100), "小華" to 80, "小英" to 90)
+    for (entry in scores) {
+        println("${entry.key} ${entry.value}")
+    }
 }
