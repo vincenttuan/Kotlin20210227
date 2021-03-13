@@ -18,4 +18,6 @@ fun main() {
     // 利用 maxWith()
     val longestString = strings.maxWithOrNull(compareBy{it.length})
     println("longest string = $longestString")
+
+
 }
