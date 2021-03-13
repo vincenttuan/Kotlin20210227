@@ -19,4 +19,6 @@ fun main() {
     println("${t.first.javaClass} ${t.second.javaClass} ${t.third.javaClass}")
     println("${t.component1()} ${t.component2()} ${t.component3()}")
 
+    // 解構 Pair, Triple
+
 }
