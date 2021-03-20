@@ -9,6 +9,13 @@ fun read() {
     }
 }
 
+// 寫入資料
+fun write(data: String) {
+    File("data.txt").appendText("$data \n")
+}
+
 fun main() {
+    read()
+    write("VB")
     read()
 }
