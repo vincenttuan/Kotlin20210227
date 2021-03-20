@@ -22,10 +22,12 @@ sealed class Employee {
 
 // Employee 類透過 sealed 告知 Employee 物件的建立只能透過 Developer 與 Manager 來建立
 fun main() {
-    val emp1 = Employee.Developer()
+    val emp1: Employee.Developer = Employee.Developer()
+    println(emp1.javaClass)
     emp1.job()
     val emp2 = Employee.Manager()
     emp2.job()
+
 }
 
 
