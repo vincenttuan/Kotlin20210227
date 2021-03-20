@@ -19,6 +19,7 @@ import java.sql.DriverManager
 * create table user(id integer primary key autoincrement, name text, age integer);
 * insert into user(name, age) values('vincent', 18);
 * insert into user(name, age) values('anita', 19);
+* select * from user;
 * .exit
 *
 * 把 mydb.db 複製到專案路徑下
