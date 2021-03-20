@@ -17,8 +17,8 @@ import java.sql.DriverManager
 * cd c:\sqlite
 * sqlite3 mydb.db
 * create table user(id integer primary key autoincrement, name text, age integer);
-* insert into user values('vincent', 18);
-* insert into user values('anita', 19);
+* insert into user(name, age) values('vincent', 18);
+* insert into user(name, age) values('anita', 19);
 * .exit
 *
 * 把 mydb.db 複製到專案路徑下
