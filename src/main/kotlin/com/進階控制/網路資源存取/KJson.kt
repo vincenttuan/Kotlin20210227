@@ -41,5 +41,8 @@ fun main() {
             println("${jo.get("parkName")} ${jo.get("surplusSpace")} / ${jo.get("totalSpace")}")
         }
     }
+    // 巨匠桃認 24.990056759076385, 121.3120108551101
+    // 請求出最近 1 公里內的停車場停車資訊
+
 
 }
