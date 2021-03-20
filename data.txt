@@ -1,5 +1,1 @@
-Java
-Kotlin
-Python
-C#
-VB 
+Cobol 

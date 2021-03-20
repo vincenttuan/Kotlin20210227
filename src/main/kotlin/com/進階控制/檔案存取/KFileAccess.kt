@@ -14,8 +14,16 @@ fun write(data: String) {
     File("data.txt").appendText("$data \n")
 }
 
+// 寫入資料(取代原檔案內容)
+fun replace(data: String) {
+    File("data.txt").writeText("$data \n")
+}
+
 fun main() {
     read()
     write("VB")
     read()
+    replace("Cobol")
+    read()
+
 }
