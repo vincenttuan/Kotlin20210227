@@ -2,7 +2,7 @@ package com.類別與物件.列舉與印章
 
 /*
 * enum 在意的是數據資料
-* sealed 在意的是類型
+* sealed(印章/密封) 在意的是類型
 * */
 
 sealed class Employee {
